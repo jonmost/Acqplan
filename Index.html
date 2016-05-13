@@ -1,89 +1,14 @@
----
-permalink: /
-layout: default
-title: Acq Planning
----
-#tree{
-  li{
-    display: block;
-    border:1px solid gray;
-    padding:1em;
-    cursor:pointer;
-    margin-bottom: .5em;
-    &:hover{
-      background-color: #fafafa;
-    }
-  }
-  ul ul{
-    display:none;
-  }
-  h3,h4{
-    margin:0;
-    padding:1em;
-  }
-}
-.back{
-  //display:none;
-  border-radius:100px;
-  background-color:gray;
-  color:white;
-  text-transform: uppercase;
-  font-size: .75em;
-  padding:.5em;
-}
-.selectedAnswer{
-  //color:red;
-  &>ul{
-    display:block !important;
-  }
-  & li{
-    //color:black;
-  }
-
-}
-.selectedChild{
-  //color: green !important;
-  //border:2px solid green !important;
-}
-.notSelected{
-  //color:blue;
-  display: none !important;
-  opacity:.5;
-}
-// Classes
-.show {
-  display: block !important;
-}
-.hidden {
-  display: none !important;
-}
-.invisible {
-  visibility: hidden;
-}
 
 
-$(document).ready(function() { 
-    $('#tree li').on('click',function() {
-    //style the selected answer
-          $(this).addClass('selectedAnswer').siblings("li").removeClass('selectedAnswer').addClass('notSelected');
-    $(this).find("li").addClass('selectedChild');
-     $(this).children("p.text").removeClass('hidden').addClass('show'); 
-  //show back btn
-      $(this).siblings(".back").removeClass('hidden').addClass('show'); 
-      $(this).parentsUntil("ul").find(".back").addClass('hidden').removeClass('show'); 
-      
-      
-    });
-//back
-    $('span.back').on('click',function() {
-        $(this).siblings("li").removeClass('notSelected selectedAnswer'); 
-      $(this).siblings("li").find("p.text").addClass('hidden'); 
-      //$(this).parentsUntil("ul").find("span.back").addClass('hidden');
-      $(this).addClass("hidden");
-    });
-  
-});
-
+<html>
+<head>
+<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+<script src="js/index.js" type="text/javascript"></script>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+	<div>
+	  
 <h1>Acquisition Planning</h1>
 
 #tree
