@@ -8,3 +8,39 @@ title: Acq Planning
 <link rel="stylesheet" href="https://github.com/jonmost/Acqplan/blob/gh-pages/script.js">
 <link rel="stylesheet" href="https://github.com/jonmost/Acqplan/blob/gh-pages/index.jade">
 <link rel="stylesheet" href="https://github.com/jonmost/Acqplan/blob/gh-pages/style.scss">
+
+#tree
+   h1 Is this a Digital Service Acquisition?
+   ul
+      li 
+        h2 Yes
+        p.text.hidden Is your Government Estimate greater than $7 million?
+        ul 
+          li
+            h3 Yes
+            p.text.hidden Did you use an Agile Estimation Tool? 
+            ul
+              li Yes
+                p.text.hidden Consider a modular approach
+              li No
+                p.text.hidden Use an Agile Estimator
+            span.back.hidden Back
+          li 
+            h3 No
+              p.text.hidden 
+            ul
+              h3 Have You conducted market research? 
+                ul
+              li Yes
+                p.text.hidden Are there any existing vehicles you can use?
+              li No
+                p.text.hidden Conduct Market Research
+            span.back.hidden Back
+     
+             
+            span.back.hidden Back
+
+      li 
+        h2 No
+        p.text.hidden Use a different model!
+      span.back.hidden Back to Home
